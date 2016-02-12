@@ -2,7 +2,7 @@
 app/styles/helpers/svg-size.styl
 app/styles/sprites/*.styl
 !app/styles/sprites/DONT\ DELETE\ THIS\ FILE.styl
-dist
+
 
 # Numerous always-ignore extensions
 *.bak

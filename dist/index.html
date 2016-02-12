@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="imagetoolbar" content="no">
+		<meta name="msthemecompatible" content="no">
+		<meta name="cleartype" content="on">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="google" value="notranslate">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<title>EPAM-TEST</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="assets/styles/app.min.css?t=1455294857808" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="index">
+			<div class="info-box js-info-box">
+				<div class="info-box__container js-container">
+					<script id="infoBoxTmp" type="text/template">{{ _.each(slides, function(item) { }}
+						<div class="info-box__slide js-slide">
+							<a href="{{=item.productUrl}}" class="info-box__picture">
+								<img src="assets/img/{{= item.img }}" class="info-box__img" alt="" />
+							</a>
+							<div class="info-box__information">
+								<h3 class="info-box__title">{{=item.title}}</h3>
+								<p class="info-box__description">{{=item.description}}</p>
+								<p class="info-box__note">{{=item.note}}</p>
+							</div>
+						</div>{{ }) }}</script>
+				</div>
+				<div class="info-box__wrap-control">
+					<a href="javascript:void(0);" class="info-box__link-show js-link-show">show details</a>
+					<div class="info-box__control-part info-box__control-part_type_left">
+						<a href="javascript:void(0);" class="info-box__btn-control info-box__btn-control_type_prev js-btn-prev">
+							<i class="info-box__arrow info-box__arrow_type_prev"></i>
+							<span class="info-box__control-text">Prev</span>
+						</a>
+						<a href="javascript:void(0);" class="info-box__btn-control info-box__btn-control_type_next js-btn-next">
+							<span class="info-box__control-text">Next</span>
+							<i class="info-box__arrow info-box__arrow_type_next"></i>
+						</a>
+					</div>
+					<div class="info-box__control-part info-box__control-part_type_right">
+						<a href="javascript:void(0);" class="info-box__btn-control info-box__btn-control_type_find js-btn-find">
+							<span class="info-box__control-text info-box__control-text_type_find">Find a Store</span>
+							<i class="info-box__arrow info-box__arrow_type_find">&#9658;</i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="assets/scripts/app.min.js"></script>
+	</body>
+
+</html>
