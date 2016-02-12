@@ -1,0 +1,159 @@
+.info-box
+	position relative
+	width 323px
+	height 337px
+	// overflow hidden
+	margin 0 auto
+	padding-top 5px
+	background url(../img/comp_plate_graybasic.png) no-repeat center center
+	background-size cover
+
+	&__container
+		position relative
+		height 270px
+		overflow hidden
+
+	&__slide
+		position absolute
+		top 0
+		left 0
+		opacity 0
+		visibility hidden
+		transition all .25s
+		&_state
+			&_active
+				visibility visible
+				opacity 1
+			&_show
+				.info-box__picture
+					display none
+				.info-box__description
+					height auto
+					overflow visible
+				.info-box__note
+					display block
+
+	&__picture
+		position relative
+		width 312px
+		margin 0 auto
+		height 200px
+		display block
+
+	&__img
+		max-width 100%
+		height auto
+
+	&__information
+		position relative
+		padding 8px 6px 0 6px
+
+	&__title
+		position relative
+		color #ff6200
+		font-weight 700
+		font-size 22px
+
+	&__description
+		position relative
+		font-size 12px
+		height 28px
+		overflow hidden
+		line-height 1.15
+		color black
+
+	&__note
+		position relative
+		display none
+		margin-top 5px
+		font-size 10px
+		color #c9ccd0
+
+	&__link-show
+		position relative
+		display block
+		color #ff7925
+		font-size 12px
+		margin-bottom 10px
+		&:hover
+			text-decoration none
+
+	&__wrap-control
+		position relative
+		padding 0 6px 6px 6px
+		clearfix()
+
+	&__control-part
+		position relative
+		&_type
+			&_left
+				float left
+			&_right
+				float right
+
+	&__btn-control
+		position relative
+		display inline-block
+		vertical-align middle
+		text-decoration none
+		line-height 26px
+		&:hover
+			.info-box__control-text
+				color white
+				text-shadow 1px 1px 1px black
+		&_type
+			&_prev
+				sprite $button_bg_white_left
+				text-align right
+				padding-right 10px
+				&:hover
+					sprite $button_bg_orange_left
+					.info-box__arrow_type_prev
+						sprite $btn_ic_brn_left
+			&_next
+				sprite $button_bg_white_right
+				text-align left
+				padding-left 10px
+				&:hover
+					sprite $button_bg_orange_right
+					.info-box__arrow_type_next
+						sprite $btn_ic_brn_right
+			&_find
+				sprite $button_find_bg_white_right
+				text-align left
+				padding-left 10px
+				&:hover
+					sprite $button_find_bg_orange_right
+					// .info-box__arrow_type_find
+					// 	color white
+
+
+	&__arrow
+		position absolute
+		top 9px
+		&_type
+			&_prev
+				sprite $btn_ic_gray_left
+				left 5px
+			&_next
+				sprite $btn_ic_gray_right
+				right 5px
+			&_find
+				line-height 1
+				color #F58220
+				top 6px
+				right 3px
+
+
+
+
+
+	&__control-text
+		color #AFAFAF
+		font-size 14px
+		line-height 1
+		font-weight 700
+		&_type
+			&_find
+				vertical-align middle
+				color #FF6200

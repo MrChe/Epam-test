@@ -1,0 +1,33 @@
+mixin info-box(data)
+	- data = data || {}
+
+	+b.info-box.js-info-box
+		+e.container.js-container
+			script#infoBoxTmp(type='text/template')
+				| {{ _.each(slides, function(item) { }}
+				+e.slide.js-slide
+					+e('a')(href='{{=item.productUrl}}').picture
+						+e('img')(src="/assets/img/{{= item.img }}").img
+					+e.information
+						+e('h3').title='{{=item.title}}'
+						+e('p').description='{{=item.description}}'
+						+e('p').note='{{=item.note}}'
+				| {{ }) }}
+		+e.wrap-control
+			+e('a')(href=jv0).link-show.js-link-show
+				| show details
+			+e.control-part._type_left
+				+e('a')(href=jv0).btn-control._type_prev.js-btn-prev
+					+e('i').arrow._type_prev
+					+e('span').control-text
+						| Prev
+				+e('a')(href=jv0).btn-control._type_next.js-btn-next
+					+e('span').control-text
+						| Next
+					+e('i').arrow._type_next
+			+e.control-part._type_right
+				+e('a')(href=jv0).btn-control._type_find.js-btn-find
+					+e('span').control-text._type_find
+						| Find a Store
+					+e('i').arrow._type_find
+						| &#9658;
