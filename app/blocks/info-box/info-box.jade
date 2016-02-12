@@ -7,7 +7,7 @@ mixin info-box(data)
 				| {{ _.each(slides, function(item) { }}
 				+e.slide.js-slide
 					+e('a')(href='{{=item.productUrl}}').picture
-						+e('img')(src="/assets/img/{{= item.img }}").img
+						+e('img')(src="assets/img/{{= item.img }}").img
 					+e.information
 						+e('h3').title='{{=item.title}}'
 						+e('p').description='{{=item.description}}'
